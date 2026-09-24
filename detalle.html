@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de la noticia | InfoHoy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="contenedor">
+      <a href="index.html" class="marca">
+        <img src="img/logo.svg" alt="Logo InfoHoy" width="40" height="40">
+        InfoHoy
+      </a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="listado.html">Noticias</a>
+        <a href="mis-favoritos.html">Favoritos</a>
+        <a href="admin.html">Administrar</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button>
+    </div>
+  </header>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <article class="detalle" id="detalle-noticia">
+        <!-- Se renderiza dinámicamente con JavaScript (detalle.js) -->
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-bottom">
+        &copy; 2026 InfoHoy. Proyecto académico - Módulo Front-end.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/detalle.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360">
+  <rect width="600" height="360" fill="#16a34a"/>
+  <circle cx="500" cy="80" r="60" fill="white" fill-opacity="0.12"/>
+  <circle cx="80" cy="300" r="90" fill="white" fill-opacity="0.10"/>
+  <text x="300" y="190" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="white" text-anchor="middle">EDUCACION</text>
+  <text x="300" y="225" font-family="Arial, sans-serif" font-size="16" fill="white" fill-opacity="0.8" text-anchor="middle">Plataforma Web de Noticias</text>
+</svg>

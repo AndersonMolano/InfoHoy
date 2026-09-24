@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | InfoHoy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="contenedor">
+      <a href="index.html" class="marca">
+        <img src="img/logo.svg" alt="Logo InfoHoy" width="40" height="40">
+        InfoHoy
+      </a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="listado.html">Noticias</a>
+        <a href="mis-favoritos.html">Favoritos</a>
+        <a href="admin.html">Administrar</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button>
+    </div>
+  </header>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="seccion-titulo">
+        <h2>Contáctanos</h2>
+        <p>¿Tienes dudas, sugerencias o quieres compartir una noticia? Escríbenos.</p>
+      </div>
+
+      <div id="mensaje-confirmacion" class="mensaje-confirmacion"></div>
+
+      <form id="form-contacto" class="form-contacto" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+          <span class="mensaje-error">Este campo es obligatorio.</span>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com">
+          <span class="mensaje-error">Ingresa un correo electrónico válido.</span>
+        </div>
+
+        <div class="campo">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" placeholder="¿Sobre qué quieres escribirnos?">
+          <span class="mensaje-error">Este campo es obligatorio.</span>
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+          <span class="mensaje-error">Este campo es obligatorio.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primario" style="width:100%;">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-bottom">
+        &copy; 2026 InfoHoy. Proyecto académico - Módulo Front-end.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contacto.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "categoria": "Tecnología",
+    "titulo": "La inteligencia artificial revoluciona el desarrollo web",
+    "descripcionBreve": "Nuevas herramientas basadas en IA están cambiando la forma en que los desarrolladores construyen aplicaciones front-end.",
+    "descripcionCompleta": "La inteligencia artificial se ha convertido en un aliado fundamental para los desarrolladores front-end. Desde la generación automática de componentes hasta la optimización de código, las herramientas de IA permiten reducir tiempos de desarrollo y mejorar la calidad del producto final. Empresas de todos los tamaños están adoptando estas soluciones para mantenerse competitivas en un mercado digital cada vez más exigente.",
+    "imagen": "img/noticia-tecnologia.svg",
+    "fecha": "2026-08-15",
+    "autor": "Equipo Editorial"
+  },
+  {
+    "id": 2,
+    "categoria": "Educación",
+    "titulo": "Plataformas virtuales transforman la educación superior",
+    "descripcionBreve": "Universidades adoptan modelos híbridos apoyados en tecnología para mejorar el aprendizaje de los estudiantes.",
+    "descripcionCompleta": "El uso de plataformas virtuales ha permitido a las instituciones de educación superior ofrecer modelos híbridos que combinan clases presenciales con contenido digital. Esta transformación ha facilitado el acceso a la educación para estudiantes de zonas alejadas, además de permitir un aprendizaje más flexible y personalizado según el ritmo de cada persona.",
+    "imagen": "img/noticia-educacion.svg",
+    "fecha": "2026-08-10",
+    "autor": "Equipo Editorial"
+  },
+  {
+    "id": 3,
+    "categoria": "Turismo",
+    "titulo": "Destinos turísticos apuestan por el turismo sostenible",
+    "descripcionBreve": "Cada vez más destinos implementan prácticas ecológicas para atraer viajeros responsables con el medio ambiente.",
+    "descripcionCompleta": "El turismo sostenible se posiciona como una tendencia creciente en todo el mundo. Destinos reconocidos están implementando políticas de conservación ambiental, uso eficiente de recursos y apoyo a comunidades locales. Los viajeros cada vez valoran más estas iniciativas al momento de elegir a dónde viajar, lo cual impulsa a la industria a innovar en sus prácticas.",
+    "imagen": "img/noticia-turismo.svg",
+    "fecha": "2026-08-05",
+    "autor": "Equipo Editorial"
+  },
+  {
+    "id": 4,
+    "categoria": "Comercial",
+    "titulo": "El comercio electrónico sigue creciendo en la región",
+    "descripcionBreve": "Las ventas en línea aumentan gracias a la confianza del consumidor y la mejora en los métodos de pago digital.",
+    "descripcionCompleta": "El comercio electrónico continúa su expansión en la región, impulsado por la mayor confianza de los consumidores en las plataformas digitales y la diversificación de métodos de pago. Pequeñas y medianas empresas están aprovechando estas herramientas para llegar a nuevos mercados sin necesidad de grandes inversiones iniciales.",
+    "imagen": "img/noticia-comercial.svg",
+    "fecha": "2026-08-01",
+    "autor": "Equipo Editorial"
+  },
+  {
+    "id": 5,
+    "categoria": "Tecnología",
+    "titulo": "Angular sigue siendo clave en el desarrollo empresarial",
+    "descripcionBreve": "El framework de Google se mantiene como una opción robusta para aplicaciones empresariales de gran escala.",
+    "descripcionCompleta": "Angular continúa siendo una de las opciones preferidas por empresas que requieren aplicaciones robustas y escalables. Su arquitectura basada en componentes, su sistema de inyección de dependencias y el soporte oficial de Google lo convierten en una herramienta confiable para proyectos de gran envergadura.",
+    "imagen": "img/noticia-tecnologia2.svg",
+    "fecha": "2026-07-28",
+    "autor": "Equipo Editorial"
+  },
+  {
+    "id": 6,
+    "categoria": "Educación",
+    "titulo": "Programación: una habilidad esencial para el futuro laboral",
+    "descripcionBreve": "Cada vez más instituciones incluyen la enseñanza de programación desde etapas tempranas de formación.",
+    "descripcionCompleta": "La programación se ha convertido en una habilidad fundamental para el mercado laboral del futuro. Instituciones educativas en distintos niveles están incorporando esta disciplina en sus planes de estudio, buscando preparar a los estudiantes para un entorno cada vez más digitalizado y competitivo.",
+    "imagen": "img/noticia-educacion2.svg",
+    "fecha": "2026-07-20",
+    "autor": "Equipo Editorial"
+  }
+]
