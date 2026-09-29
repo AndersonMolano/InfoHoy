@@ -39,3 +39,13 @@ function marcarEnlaceActivo() {
     }
   });
 }
+
+function escucharCambiosDeDatos(callback) {
+  const CLAVES_RELEVANTES = ["noticias_creadas", "noticias_eliminadas", "noticias_favoritas"];
+
+  window.addEventListener("storage", (evento) => {
+    if (CLAVES_RELEVANTES.includes(evento.key)) {
+      callback();
+    }
+  });
+}

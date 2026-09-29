@@ -5,6 +5,11 @@
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
+  cargarDestacadas();
+  escucharCambiosDeDatos(cargarDestacadas);
+});
+
+function cargarDestacadas() {
   obtenerNoticias()
     .then((noticias) => {
       const destacadas = [...noticias]
@@ -13,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       renderizarDestacadas(destacadas);
     })
     .catch((error) => console.error("Error cargando destacadas:", error));
-});
+}
 
 function renderizarDestacadas(noticias) {
   const contenedor = document.getElementById("grid-destacadas");

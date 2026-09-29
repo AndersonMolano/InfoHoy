@@ -9,6 +9,7 @@ let TODAS_LAS_NOTICIAS = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   cargarNoticias();
+  escucharCambiosDeDatos(cargarNoticias);
 });
 
 /**
