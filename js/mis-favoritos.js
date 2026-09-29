@@ -5,6 +5,11 @@
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
+  cargarFavoritas();
+  escucharCambiosDeDatos(cargarFavoritas);
+});
+
+function cargarFavoritas() {
   obtenerNoticias()
     .then((noticias) => {
       const idsFavoritos = obtenerFavoritos();
@@ -12,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       renderizarFavoritas(favoritas);
     })
     .catch((error) => console.error("Error cargando favoritos:", error));
-});
+}
 
 function renderizarFavoritas(noticias) {
   const contenedor = document.getElementById("grid-favoritos");

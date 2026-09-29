@@ -7,6 +7,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   cargarTablaNoticias();
+  escucharCambiosDeDatos(cargarTablaNoticias);
 
   const formulario = document.getElementById("form-crear-noticia");
   if (formulario) {
