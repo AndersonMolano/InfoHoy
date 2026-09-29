@@ -58,5 +58,15 @@
     "imagen": "img/noticia-educacion2.svg",
     "fecha": "2026-07-20",
     "autor": "Equipo Editorial"
+  },
+  {
+    "id": 7,
+    "categoria": "Educación",
+    "titulo": "Noticia de Prueba - Poli",
+    "descripcionBreve": "Noticia de Prueba 08",
+    "descripcionCompleta": "La programación se ha convertido en una habilidad fundamental para el mercado laboral del futuro. Instituciones educativas en distintos niveles están incorporando esta disciplina en sus planes de estudio, buscando preparar a los estudiantes para un entorno cada vez más digitalizado y competitivo.",
+    "imagen": "img/noticia-prueba.jpg",
+    "fecha": "2026-07-20",
+    "autor": "Equipo - Prueba"
   }
 ]
