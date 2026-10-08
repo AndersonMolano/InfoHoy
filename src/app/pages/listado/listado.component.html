@@ -1,0 +1,31 @@
+<section class="seccion">
+  <div class="contenedor">
+    <div class="seccion-titulo">
+      <h2>Catálogo de noticias</h2>
+      <p>Filtra por categoría y descubre lo último</p>
+    </div>
+
+    <div class="filtros">
+      <button
+        *ngFor="let categoria of categorias"
+        type="button"
+        class="filtro-btn"
+        [class.activo]="categoria === categoriaActiva"
+        (click)="filtrarPorCategoria(categoria)"
+      >
+        {{ categoria }}
+      </button>
+    </div>
+
+    <div class="grid-noticias">
+      <app-noticia-card
+        *ngFor="let noticia of noticiasFiltradas"
+        [noticia]="noticia"
+        [esFavorita]="favoritosService.esFavorito(noticia.id)"
+        (favoritoToggle)="onFavoritoToggle($event)"
+      ></app-noticia-card>
+    </div>
+
+    <p *ngIf="noticiasFiltradas.length === 0">No hay noticias para esta categoría.</p>
+  </div>
+</section>

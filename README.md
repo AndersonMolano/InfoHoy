@@ -1,53 +1,93 @@
-# InfoHoy — Plataforma Web de Noticias
+# InfoHoy — Plataforma Web de Noticias (Angular)
 
-Proyecto académico del módulo **Front-end** (Entrega 2 — Prototipo funcional).
+Entrega 3 del proyecto académico del módulo Front-end. Migración de la aplicación
+"InfoHoy" (Entrega 2, HTML/CSS/JS) a Angular, usando componentes standalone,
+Angular Router, Reactive Forms y HttpClient.
 
-## Descripción
+## Requisitos
 
-Aplicación web tipo periódico donde los usuarios pueden explorar noticias de distintas
-categorías (tecnología, educación, turismo, comercial), ver el detalle de cada una,
-guardar favoritos, enviar un mensaje de contacto y gestionar noticias básicas (crear/eliminar).
+- Node.js 18+ (recomendado 20 o 22)
+- Angular CLI (`npm install -g @angular/cli`)
+
+## Instalación
+
+```bash
+npm install
+```
+
+## Ejecutar en modo desarrollo
+
+```bash
+npm start
+```
+
+Abre http://localhost:4200
+
+## Generar build de producción
+
+```bash
+npm run build
+```
+
+El resultado queda en `dist/infohoy-angular/browser`, listo para desplegar en
+cualquier hosting estático (Netlify, Vercel, GitHub Pages).
 
 ## Estructura del proyecto
 
 ```
-plataforma-noticias/
-├── index.html            # Página de inicio (Home)
-├── listado.html           # Catálogo de noticias con filtros
-├── detalle.html            # Vista de detalle de una noticia
-├── mis-favoritos.html      # Noticias guardadas en favoritos
-├── contacto.html           # Formulario de contacto con validaciones
-├── admin.html               # Mini CRUD: crear y eliminar noticias
-├── css/
-│   └── styles.css          # Estilos generales del sitio
-├── js/
-│   ├── main.js              # Menú responsive y utilidades comunes
-│   ├── datos.js             # Capa de datos (JSON + localStorage / CRUD)
-│   ├── favoritos.js         # Gestión de favoritos (localStorage)
-│   ├── index.js              # Lógica de la página de inicio
-│   ├── noticias.js           # Lógica del listado y filtros
-│   ├── detalle.js            # Lógica de la vista de detalle
-│   ├── mis-favoritos.js      # Lógica de la página de favoritos
-│   ├── admin.js               # Lógica del Mini CRUD
-│   └── contacto.js            # Validaciones del formulario de contacto
-├── data/
-│   └── noticias.json         # Datos base de las noticias
-└── img/
-    └── *.svg                  # Imágenes/ilustraciones del proyecto
+src/app/
+├── app.component.ts          Componente raíz (header + router-outlet + footer)
+├── app.routes.ts              Definición de rutas
+├── app.config.ts               Configuración de providers (HttpClient, Router)
+├── core/
+│   ├── models/noticia.model.ts     Interfaz Noticia
+│   └── services/
+│       ├── noticias.service.ts      Datos + Mini CRUD (HttpClient + localStorage)
+│       └── favoritos.service.ts     Gestión de favoritos (Signals + localStorage)
+├── components/
+│   ├── header/                      Encabezado con navegación
+│   ├── footer/                      Pie de página
+│   └── noticia-card/                Tarjeta de noticia reutilizable (@Input/@Output)
+└── pages/
+    ├── home/                        Página de inicio
+    ├── listado/                     Catálogo con filtros
+    ├── detalle/                     Vista de detalle (ruta con parámetro :id)
+    ├── contacto/                    Formulario con Reactive Forms
+    ├── mis-favoritos/                Noticias guardadas en favoritos
+    └── admin/                        Mini CRUD (crear/eliminar noticias)
+
+public/assets/
+├── data/noticias.json           Datos base de las noticias
+└── img/                          Imágenes del proyecto
 ```
 
-## Tecnologías utilizadas
+## Enrutamiento
 
-- HTML5 semántico
-- CSS3 (variables, Flexbox, Grid, diseño responsive)
-- JavaScript (ES6+, Fetch API, localStorage, sessionStorage)
+La aplicación usa **hash routing** (`/#/ruta`) para que funcione sin configuración
+adicional en cualquier hosting estático gratuito, incluyendo GitHub Pages.
 
-## Funcionalidades implementadas
+## Despliegue
 
-- Renderizado dinámico de noticias desde `data/noticias.json`
-- Filtro de noticias por categoría
-- Gestión de favoritos con `localStorage`
-- Vista de detalle por noticia (`detalle.html?id=`)
-- Formulario de contacto con validaciones (campos obligatorios y correo válido)
-- Mini CRUD: creación y eliminación de noticias (persistido en `localStorage`)
-- Diseño responsive (menú hamburguesa en dispositivos móviles)
+### Netlify (recomendado, el más simple)
+1. Ejecutar `npm run build`.
+2. Entrar a https://app.netlify.com/drop y arrastrar la carpeta `dist/infohoy-angular/browser`.
+3. Netlify entrega una URL pública al instante.
+
+### Vercel
+1. Crear cuenta en https://vercel.com
+2. Conectar el repositorio de GitHub/GitLab.
+3. Build command: `npm run build` — Output directory: `dist/infohoy-angular/browser`
+
+### GitHub Pages
+1. `npm run build`
+2. Subir el contenido de `dist/infohoy-angular/browser` a la rama `gh-pages`.
+3. Activar GitHub Pages en Settings → Pages → rama `gh-pages`.
+
+## Tecnologías
+
+- Angular 18 (standalone components)
+- Angular Router (hash location strategy)
+- Reactive Forms
+- HttpClient
+- Signals (gestión de favoritos)
+- CSS3 (reutilizado de la Entrega 2, sin frameworks adicionales)

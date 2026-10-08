@@ -1,0 +1,34 @@
+<footer class="footer">
+  <div class="contenedor">
+    <div class="footer-grid">
+      <div>
+        <h4>InfoHoy</h4>
+        <p>Plataforma web de noticias desarrollada como proyecto académico del módulo de Front-end.</p>
+        <br />
+        <ul>
+          <li *ngFor="let integrante of integrantes">{{ integrante }}</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a routerLink="/">Inicio</a></li>
+          <li><a routerLink="/noticias">Noticias</a></li>
+          <li><a routerLink="/favoritos">Favoritos</a></li>
+          <li><a routerLink="/contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li>poli&#64;infohoy.com</li>
+          <li>+57 322 750 1662</li>
+          <li>Bogotá, Colombia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; {{ anioActual }} InfoHoy. Proyecto académico - Módulo Front-end 😉.
+    </div>
+  </div>
+</footer>

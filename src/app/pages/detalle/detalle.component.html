@@ -1,0 +1,29 @@
+<section class="seccion">
+  <div class="contenedor">
+    <article class="detalle" *ngIf="noticia; else noEncontrada">
+      <img [src]="noticia.imagen" [alt]="noticia.titulo" />
+      <div class="detalle-cuerpo">
+        <p class="detalle-meta">
+          {{ noticia.categoria }} &middot; {{ formatearFecha(noticia.fecha) }} &middot; {{ noticia.autor }}
+        </p>
+        <h1>{{ noticia.titulo }}</h1>
+        <p>{{ noticia.descripcionCompleta }}</p>
+        <div class="detalle-acciones">
+          <button type="button" class="btn btn-primario" (click)="alternarFavorito()">
+            {{ favoritosService.esFavorito(noticia.id) ? 'Quitar de favoritos' : 'Agregar a favoritos' }}
+          </button>
+          <a class="btn btn-secundario" style="color:#1d4ed8;border-color:#1d4ed8;" routerLink="/contacto">Contactar</a>
+          <a class="btn btn-secundario" style="color:#1d4ed8;border-color:#1d4ed8;" routerLink="/noticias">&larr; Volver al listado</a>
+        </div>
+      </div>
+    </article>
+
+    <ng-template #noEncontrada>
+      <div class="detalle-cuerpo" *ngIf="!cargando">
+        <h1>Noticia no encontrada</h1>
+        <p>La noticia que buscas no existe o fue eliminada.</p>
+        <a class="btn btn-primario" routerLink="/noticias">Volver al listado</a>
+      </div>
+    </ng-template>
+  </div>
+</section>

@@ -1,0 +1,59 @@
+<section class="hero">
+  <div class="contenedor">
+    <h1>Las noticias que importan, en un solo lugar</h1>
+    <p>Explora contenido educativo, tecnológico, turístico y comercial actualizado, guarda tus favoritos y mantente informado.</p>
+    <a routerLink="/noticias" class="btn btn-primario">Explorar noticias</a>
+    <a routerLink="/contacto" class="btn btn-secundario">Contáctanos</a>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenedor">
+    <div class="seccion-titulo">
+      <h2>Noticias destacadas</h2>
+      <p>Lo más reciente de nuestra plataforma</p>
+    </div>
+    <div class="grid-noticias">
+      <app-noticia-card
+        *ngFor="let noticia of destacadas"
+        [noticia]="noticia"
+        [mostrarBotonFavorito]="false"
+      ></app-noticia-card>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" style="background-color:#eef2ff;">
+  <div class="contenedor">
+    <div class="seccion-titulo">
+      <h2>¿Por qué InfoHoy?</h2>
+      <p>Una plataforma pensada para mantenerte informado</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="icono">📰</div>
+        <h3>Contenido variado</h3>
+        <p>Noticias educativas, tecnológicas, turísticas y comerciales en un solo lugar.</p>
+      </div>
+      <div class="info-card">
+        <div class="icono">⭐</div>
+        <h3>Guarda tus favoritos</h3>
+        <p>Marca las noticias que más te interesan y revísalas cuando quieras.</p>
+      </div>
+      <div class="info-card">
+        <div class="icono">⚡</div>
+        <h3>Rápido y responsive</h3>
+        <p>Diseño moderno que se adapta a computadores, tablets y celulares.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="contenedor">
+    <h2>¿Tienes una noticia para compartir?</h2>
+    <p>Publícala desde nuestro panel de administración o escríbenos directamente.</p>
+    <a routerLink="/admin" class="btn btn-primario">Publicar noticia</a>
+    <a routerLink="/contacto" class="btn btn-secundario">Escríbenos</a>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+<section class="seccion">
+  <div class="contenedor">
+    <div class="seccion-titulo">
+      <h2>Administrar noticias</h2>
+      <p>Gestión básica (Mini CRUD): crear y eliminar noticias</p>
+    </div>
+
+    <form [formGroup]="formulario" (ngSubmit)="crear()" class="form-contacto" style="max-width:100%;">
+      <div class="campo">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" formControlName="titulo" placeholder="Título de la noticia" />
+      </div>
+
+      <div class="campo">
+        <label for="categoria">Categoría</label>
+        <select id="categoria" formControlName="categoria">
+          <option *ngFor="let categoria of categoriasDisponibles" [value]="categoria">{{ categoria }}</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="descripcionBreve">Descripción breve</label>
+        <input type="text" id="descripcionBreve" formControlName="descripcionBreve" placeholder="Resumen corto para la tarjeta" />
+      </div>
+
+      <div class="campo">
+        <label for="descripcionCompleta">Descripción completa</label>
+        <textarea id="descripcionCompleta" formControlName="descripcionCompleta" placeholder="Contenido completo de la noticia"></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="imagen">Ruta de imagen (opcional)</label>
+        <input type="text" id="imagen" formControlName="imagen" placeholder="assets/img/mi-imagen.svg" />
+      </div>
+
+      <div class="campo">
+        <label for="autor">Autor (opcional)</label>
+        <input type="text" id="autor" formControlName="autor" placeholder="Nombre del autor" />
+      </div>
+
+      <button type="submit" class="btn btn-primario" style="width:100%;">Crear noticia</button>
+    </form>
+
+    <table class="tabla-admin">
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Categoría</th>
+          <th>Fecha</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let noticia of noticias">
+          <td>{{ noticia.titulo }}</td>
+          <td>{{ noticia.categoria }}</td>
+          <td>{{ noticia.fecha }}</td>
+          <td><button type="button" class="btn-eliminar" (click)="eliminar(noticia.id)">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+<section class="seccion">
+  <div class="contenedor">
+    <div class="seccion-titulo">
+      <h2>Mis noticias favoritas</h2>
+      <p>Guardadas localmente en tu navegador (localStorage)</p>
+    </div>
+
+    <div class="grid-noticias" *ngIf="favoritas.length > 0; else sinFavoritas">
+      <app-noticia-card
+        *ngFor="let noticia of favoritas"
+        [noticia]="noticia"
+        [esFavorita]="true"
+        (favoritoToggle)="onFavoritoToggle($event)"
+      ></app-noticia-card>
+    </div>
+
+    <ng-template #sinFavoritas>
+      <div class="estado-vacio">
+        <div class="icono">&#9825;</div>
+        <p>Aún no has guardado noticias en favoritos.</p>
+        <a class="btn btn-primario" routerLink="/noticias" style="margin-top:16px;display:inline-block;">Explorar noticias</a>
+      </div>
+    </ng-template>
+  </div>
+</section>

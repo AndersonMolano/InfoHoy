@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="contenedor">
+    <a routerLink="/" class="marca">
+      <img src="assets/img/logo.svg" alt="Logo InfoHoy" width="40" height="40" />
+      InfoHoy
+    </a>
+
+    <nav class="nav" [class.abierto]="menuAbierto()">
+      <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+      <a routerLink="/noticias" routerLinkActive="activo">Noticias</a>
+      <a routerLink="/favoritos" routerLinkActive="activo">Favoritos</a>
+      <a routerLink="/admin" routerLinkActive="activo">Administrar</a>
+      <a routerLink="/contacto" routerLinkActive="activo">Contacto</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Abrir menú" (click)="alternarMenu()">&#9776;</button>
+  </div>
+</header>
